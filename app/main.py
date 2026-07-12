@@ -367,10 +367,10 @@ st.markdown(
 
 
 
-base_path = Path(__file__).resolve().parent
+project_path = Path(__file__).resolve().parent.parent
 
 model_path = (
-    base_path
+    project_path
     / "models"
     / "random_forest_air_quality.pkl"
 )
