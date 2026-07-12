@@ -6,7 +6,7 @@ from pathlib import Path
 import altair as alt
 import pandas as pd
 import streamlit as st
-
+from pathlib import Path
 
 
 
@@ -366,16 +366,14 @@ st.markdown(
 )
 
 
-# ===================================================
-# 3. LOAD PICKLE BUNDLE USING YOUR WORKING FULL PATH
-# ===================================================
 
-model_path = Path(
-    r"C:\Users\ivans\Desktop\All\MSC\Data_Processsing"
-    r"\assignement\air_quality_analysis\models"
-    r"\random_forest_air_quality.pkl"
+base_path = Path(__file__).resolve().parent
+
+model_path = (
+    base_path
+    / "models"
+    / "random_forest_air_quality.pkl"
 )
-
 
 @st.cache_resource
 def load_model_bundle(
