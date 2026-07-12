@@ -241,7 +241,6 @@ print(class_distribution)
 # 7. CREATE ONE COMMON TRAIN-TEST SPLIT
 
 
-# The 30% test set remains untouched during cross-validation.
 train_data, test_data = train_test_split(
     df_model,
     test_size=0.30,
@@ -739,7 +738,7 @@ display(cv_results.round(4))
 
 
 
-# 15. SELECT THE BEST MODEL
+#15. SELECT THE BEST MODEL
 
 
 best_model_name = cv_results.loc[0, "Model"]
